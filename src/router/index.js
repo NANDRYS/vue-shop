@@ -8,13 +8,13 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     ...home,
-    ...cart,
     ...favourites,
+    ...cart,
     ...product,
     {
       path: '/:catchAll(.*)',
       name: 'not-found',
-      component: () => import('../views/NotFoundView.vue')
+      component: () => import('../views/notFound/NotFoundView.vue')
     }
   ]
 })
